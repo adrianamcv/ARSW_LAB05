@@ -1,6 +1,8 @@
 
 package edu.eci.arsw.blueprints.model;
 
+import edu.eci.arsw.blueprints.filter.BluePrintFilter;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +16,8 @@ public class Blueprint {
     private List<Point> points=null;
     
     private String name=null;
+
+
             
     public Blueprint(String author,String name,Point[] pnts){
         this.author=author;
@@ -26,8 +30,9 @@ public class Blueprint {
         points=new ArrayList<>();
     }
 
-    public Blueprint(String johan, String significado, ArrayList<Point> puntos) {
-    }
+    public Blueprint(){}
+
+
 
     public String getName() {
         return name;

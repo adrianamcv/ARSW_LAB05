@@ -47,8 +47,10 @@ public class BlueprintsServices {
         bluePrints.add(bp);
     }
     
-    public Set<Blueprint> getAllBlueprints(){
-        return bluePrints;
+    public Set<Blueprint> getAllBlueprints() throws BlueprintNotFoundException {
+        Set<Blueprint> allBlue=null;
+        allBlue = bpp.getBlueprints();
+        return allBlue;
     }
     
     /**

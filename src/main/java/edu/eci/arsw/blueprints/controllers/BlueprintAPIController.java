@@ -29,7 +29,7 @@ import javax.validation.Valid;
 public class BlueprintAPIController {
 
     @Autowired
-    @Qualifier("blueprintsServices")
+    @Qualifier("bluePrintServices")
     BlueprintsServices bp;
 
 

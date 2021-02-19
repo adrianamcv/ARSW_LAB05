@@ -1,0 +1,8 @@
+Qué condiciones de carrera se podrían presentar?
+La condicion se carreara se puede presentar al momento de actualizar, consultar o agregar un nuevo elemento, donde
+el HashMap que contiene a todos los elementos del BluePrint donde si le quitamos esa condicion de carrera
+no tendriamos alguna inconsistencia o problema.
+
+Cuales son las respectivas regiones críticas?
+Cuando se realiza el llamado al HashMap de la clase InMemoryBluePrintsPersistence donde
+sincronizamos y nos evitamos la condicion de carrera.

@@ -1,8 +1,11 @@
-Qué condiciones de carrera se podrían presentar?
-La condicion se carreara se puede presentar al momento de actualizar, consultar o agregar un nuevo elemento, donde
-el HashMap que contiene a todos los elementos del BluePrint donde si le quitamos esa condicion de carrera
-no tendriamos alguna inconsistencia o problema.
+¿Qué condiciones de carrera se podrían presentar?
 
-Cuales son las respectivas regiones críticas?
-Cuando se realiza el llamado al HashMap de la clase InMemoryBluePrintsPersistence donde
-sincronizamos y nos evitamos la condicion de carrera.
+Una de las condiciones de carrera se da cunado se actualiza la fuente principal de guardado de los datos que es un hashMap
+con todos los blueprint con su respectivo nombre y autor. Al priorizar este problema no deberia existir condicion de carrera
+por un recurso.
+
+¿Cuales son las respectivas regiones críticas?
+
+La region critica se da cada vez que se realiza un llamado a este HashMap, para consultar o para ingresar un nuevo elemento a la 
+estructura de datos. Por lo tanto en cada método es necesario sincronizar el hashmap para garantizar que no hallan condiciones de
+carrera por el recurso.
